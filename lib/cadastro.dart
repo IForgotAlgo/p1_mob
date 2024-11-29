@@ -1,157 +1,202 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_animate/flutter_animate.dart'; // Importando para animações
 
 class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
+
   @override
   _SignUpPageState createState() => _SignUpPageState();
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final _formKey = GlobalKey<FormState>();
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController =
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
       TextEditingController();
 
-  // Validação de e-mail
-  String? _validateEmail(String? value) {
-    if (value == null || value.isEmpty) {
-      return 'Por favor, insira um e-mail.';
+  // Função para registrar o usuário
+  void register(
+      BuildContext context, String email, String senha, String confirmSenha) {
+    if (senha != confirmSenha) {
+      _mostrarErro(context, 'As senhas não coincidem!');
+      return;
     }
-    final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
-    if (!emailRegex.hasMatch(value)) {
-      return 'Por favor, insira um e-mail válido.';
-    }
-    return null;
+
+    FirebaseAuth.instance
+        .createUserWithEmailAndPassword(email: email, password: senha)
+        .then((userCredential) {
+      // Navega para a tela principal após cadastro bem-sucedido
+      Navigator.pushReplacementNamed(context, 'principal');
+    }).catchError((e) {
+      // Exibe erros de cadastro
+      _mostrarErro(context, _getErrorMessage(e.code));
+    });
   }
 
-  // Validação de senha
-  String? _validatePassword(String? value) {
-    if (value == null || value.isEmpty) {
-      return 'Por favor, insira uma senha.';
-    }
-    if (value.length < 6) {
-      return 'A senha deve ter pelo menos 6 caracteres.';
-    }
-    return null;
+  // Função para exibir uma mensagem de erro
+  void _mostrarErro(BuildContext context, String mensagem) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text('Erro de Cadastro'),
+        content: Text(mensagem),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Tentar novamente'),
+          ),
+        ],
+      ),
+    );
   }
 
-  // Validação de confirmação de senha
-  String? _validateConfirmPassword(String? value) {
-    if (value == null || value.isEmpty) {
-      return 'Por favor, confirme sua senha.';
-    }
-    if (value != _passwordController.text) {
-      return 'As senhas não coincidem.';
-    }
-    return null;
-  }
-
-  // Validação de todos os campos
-  void _validateForm() {
-    if (_formKey.currentState!.validate()) {
-      // Se tudo estiver válido, exibe mensagem de sucesso
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Cadastro realizado com sucesso!')),
-      );
+  // Função para mapear erros para mensagens amigáveis
+  String _getErrorMessage(String errorCode) {
+    switch (errorCode) {
+      case 'email-already-in-use':
+        return 'Este e-mail já está em uso.';
+      case 'invalid-email':
+        return 'O formato do e-mail é inválido.';
+      case 'weak-password':
+        return 'A senha deve ter pelo menos 6 caracteres.';
+      default:
+        return 'Erro desconhecido: $errorCode';
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          
-        ],
-        title: const Text('Cadastro de Usuário'),
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Form(
-          key: _formKey,
-          child: ListView(
-            children: [
-              // Campo Nome
-              TextFormField(
-                controller: _nameController,
-                decoration: const InputDecoration(
-                  labelText: 'Nome',
-                  border: OutlineInputBorder(),
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Por favor, insira seu nome.';
-                  }
-                  return null;
-                },
+      backgroundColor: const Color.fromARGB(192, 3, 7, 44),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(height: 100),
+            Center(
+              child: Image.asset(
+                'assets/images/logo.png',
+                height: 200,
+                width: 200,
+              )
+                  .animate()
+                  .fadeIn(duration: 1200.ms), // Animação de fade-in na logo
+            ),
+            const SizedBox(height: 50),
+            const Text(
+              'Cadastro',
+              style: TextStyle(
+                fontSize: 32,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
               ),
-              const SizedBox(height: 16),
-
-              // Campo E-mail
-              TextFormField(
-                controller: _emailController,
-                decoration: const InputDecoration(
-                  labelText: 'E-mail',
-                  border: OutlineInputBorder(),
-                ),
-                keyboardType: TextInputType.emailAddress,
-                validator: _validateEmail,
-              ),
-              const SizedBox(height: 16),
-
-              // Campo Senha
-              TextFormField(
-                controller: _passwordController,
-                decoration: const InputDecoration(
-                  labelText: 'Senha',
-                  border: OutlineInputBorder(),
-                ),
-                obscureText: true,
-                validator: _validatePassword,
-              ),
-              const SizedBox(height: 16),
-
-              // Campo Confirmar Senha
-              TextFormField(
-                controller: _confirmPasswordController,
-                decoration: const InputDecoration(
-                  labelText: 'Confirmar Senha',
-                  border: OutlineInputBorder(),
-                ),
-                obscureText: true,
-                validator: _validateConfirmPassword,
-              ),
-              const SizedBox(height: 32),
-
-              // Botão de Cadastro
-              ElevatedButton(
-                onPressed: _validateForm,
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 20, vertical: 15),
-                  backgroundColor: const Color.fromARGB(255, 3, 7, 44),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                ),
-                child: const Text(
-                  'Cadastrar',
-                  style: TextStyle(fontSize: 18, color: Colors.white),
-                ),
-              ),
-            ],
-          ),
+            )
+                .animate()
+                .fadeIn(duration: 1200.ms), // Animação de fade-in no título
+            const Text(
+              'Crie uma conta para continuar',
+              style: TextStyle(fontSize: 18, color: Colors.white),
+            )
+                .animate()
+                .fadeIn(duration: 1400.ms), // Animação de fade-in no subtítulo
+            const SizedBox(height: 30),
+            _buildTextField(
+              controller: emailController,
+              label: 'E-mail',
+              icon: Icons.email,
+            ).animate().slideX(begin: -1, end: 0).fadeIn(
+                duration: 1000.ms), // Animação de slideX e fade-in no campo
+            const SizedBox(height: 20),
+            _buildTextField(
+              controller: passwordController,
+              label: 'Senha',
+              icon: Icons.lock,
+              obscureText: true,
+            ).animate().slideX(begin: -1, end: 0).fadeIn(
+                duration: 1100.ms), // Animação de slideX e fade-in no campo
+            const SizedBox(height: 20),
+            _buildTextField(
+              controller: confirmPasswordController,
+              label: 'Confirmar Senha',
+              icon: Icons.lock_outline,
+              obscureText: true,
+            ).animate().slideX(begin: -1, end: 0).fadeIn(
+                duration: 1200.ms), // Animação de slideX e fade-in no campo
+            const SizedBox(height: 40),
+            _buildElevatedButton('Cadastrar', () {
+              register(
+                context,
+                emailController.text,
+                passwordController.text,
+                confirmPasswordController.text,
+              );
+            })
+                .animate()
+                .fadeIn(duration: 1400.ms), // Animação de fade-in no botão
+            const SizedBox(height: 20),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, 'login');
+              },
+              child: const Text(
+                'Já tem uma conta? Faça login.',
+                style: TextStyle(color: Colors.white),
+              )
+                  .animate()
+                  .fadeIn(duration: 1500.ms), // Animação de fade-in no link
+            ),
+          ],
         ),
       ),
     );
   }
-}
 
-void main() {
-  runApp(MaterialApp(
-    home: SignUpPage(),
-    debugShowCheckedModeBanner: false,
-  ));
+  // Método auxiliar para construir um campo de texto
+  Widget _buildTextField({
+    required TextEditingController controller,
+    required String label,
+    required IconData icon,
+    bool obscureText = false,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32),
+      child: TextField(
+        controller: controller,
+        obscureText: obscureText,
+        style: const TextStyle(color: Colors.white),
+        decoration: InputDecoration(
+          labelText: label,
+          labelStyle: const TextStyle(color: Colors.white),
+          filled: true,
+          fillColor: const Color.fromARGB(100, 255, 255, 255),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide.none,
+          ),
+          prefixIcon: Icon(icon, color: Colors.white),
+        ),
+      ),
+    );
+  }
+
+  // Método auxiliar para construir um botão
+  Widget _buildElevatedButton(String label, VoidCallback onPressed) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+      ),
+      child: Text(
+        label,
+        style: const TextStyle(
+          fontSize: 18,
+          color: Color.fromARGB(192, 3, 7, 44),
+        ),
+      ),
+    );
+  }
 }

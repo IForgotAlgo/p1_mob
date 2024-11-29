@@ -1,47 +1,44 @@
 import 'package:flutter/material.dart';
-//import 'menu_page.dart';  // Certifique-se de importar a página MenuPage
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
-class LoginPag extends StatefulWidget {
-  const LoginPag({super.key});
+// Página de Login
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  _LoginPagState createState() => _LoginPagState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _LoginPagState extends State<LoginPag> {
+class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  // Valores de e-mail e senha predefinidos (simulação)
-  final String predefinedEmail = 'gabriela.camolezi@fatec.sp.gov.br';
-  final String predefinedPassword = '123456';
+  // Função de login
+  void login(String email, String senha) {
+    FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: senha)
+      .then((userCredential) {
+        Navigator.pushReplacementNamed(context, 'principal');
+      }).catchError((e) {
+        _mostrarErro(e.message);
+      });
+  }
 
-  void login() {
-    String email = emailController.text;
-    String password = passwordController.text;
-
-    // Verificação simples
-    if (email == predefinedEmail && password == predefinedPassword) {
-      // Se o login for bem-sucedido, navega para a tela principal do cardápio
-      Navigator.pushNamed(context, 'principal');
-    } else {
-      // Se falhar, exibe um erro
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: const Text('Erro de Login'),
-          content: const Text('E-mail ou senha incorretos!'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text('Tentar novamente'),
-            ),
-          ],
-        ),
-      );
-    }
+  // Função para exibir um erro
+  void _mostrarErro(String erro) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text('Erro de Login'),
+        content: Text(erro),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Tentar novamente'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -51,20 +48,17 @@ class _LoginPagState extends State<LoginPag> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 100),
-
+            const SizedBox(height: 80),
             Center(
               child: Image.asset(
                 'assets/images/logo.png',
                 height: 200,
                 width: 200,
-              ),
+              ).animate().fadeIn(duration: 1000.ms),  // Logo com animação de fade-in
             ),
-
-            const SizedBox(height: 50),
-
+            const SizedBox(height: 30),
             const Text(
-              'Olá!',
+              'Login',
               style: TextStyle(
                 fontSize: 32,
                 color: Colors.white,
@@ -72,104 +66,90 @@ class _LoginPagState extends State<LoginPag> {
               ),
             ),
             const Text(
-              'Seja bem-vindo',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-              ),
+              'Entre na sua conta',
+              style: TextStyle(fontSize: 18, color: Colors.white),
             ),
-
-            const SizedBox(height: 30),
-
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32),
-              child: TextField(
-                controller: emailController,
-                style: const TextStyle(color: Colors.white),
-                decoration: InputDecoration(
-                  labelText: 'E-mail',
-                  labelStyle: const TextStyle(color: Colors.white),
-                  filled: true,
-                  fillColor: const Color.fromARGB(100, 255, 255, 255),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide.none,
-                  ),
-                  prefixIcon: const Icon(Icons.email, color: Colors.white),
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 20),
-
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32),
-              child: TextField(
-                controller: passwordController,
-                obscureText: true,
-                style: const TextStyle(color: Colors.white),
-                decoration: InputDecoration(
-                  labelText: 'Senha',
-                  labelStyle: const TextStyle(color: Colors.white),
-                  filled: true,
-                  fillColor: const Color.fromARGB(100, 255, 255, 255),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide.none,
-                  ),
-                  prefixIcon: const Icon(Icons.lock, color: Colors.white),
-                ),
-              ),
-            ),
-
             const SizedBox(height: 40),
-
-            ElevatedButton(
+            // Campo de E-mail com animação
+            _buildTextField(
+              controller: emailController,
+              label: 'E-mail',
+              icon: Icons.email,
+            ),
+            const SizedBox(height: 20),
+            // Campo de Senha com animação
+            _buildTextField(
+              controller: passwordController,
+              label: 'Senha',
+              icon: Icons.lock,
+              obscureText: true,
+            ),
+            const SizedBox(height: 40),
+            // Botão de login com animação
+            _buildElevatedButton('Entrar', () {
+              login(emailController.text, passwordController.text);
+            }).animate().fadeIn(duration: 1000.ms).scale(duration: 500.ms),  // Animação de fade-in e scale
+            const SizedBox(height: 20),
+            // Link para cadastro
+            TextButton(
               onPressed: () {
-                login(); // Chama a função de login
+                Navigator.pushReplacementNamed(context, 'cadastro');
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 80, vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),
               child: const Text(
-                'Entrar',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Color.fromARGB(192, 3, 7, 44),
-                ),
+                'Ainda não tem conta? Cadastre-se.',
+                style: TextStyle(color: Colors.white),
               ),
             ),
-
-            const SizedBox(height: 20),
-
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, 'cadastro'); 
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 70, vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),
-              child: const Text(
-                'Cadastrar',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Color.fromARGB(192, 3, 7, 44),
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 20),
           ],
+        ),
+      ),
+    );
+  }
+
+  // Método auxiliar para construir o campo de texto
+  Widget _buildTextField({
+    required TextEditingController controller,
+    required String label,
+    required IconData icon,
+    bool obscureText = false,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32),
+      child: TextField(
+        controller: controller,
+        obscureText: obscureText,
+        style: const TextStyle(color: Colors.white),
+        decoration: InputDecoration(
+          labelText: label,
+          labelStyle: const TextStyle(color: Colors.white),
+          filled: true,
+          fillColor: const Color.fromARGB(100, 255, 255, 255),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide.none,
+          ),
+          prefixIcon: Icon(icon, color: Colors.white),
+        ),
+      ),
+    );
+  }
+
+  // Método auxiliar para construir um botão
+  Widget _buildElevatedButton(String label, VoidCallback onPressed) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+      ),
+      child: Text(
+        label,
+        style: const TextStyle(
+          fontSize: 18,
+          color: Color.fromARGB(192, 3, 7, 44),
         ),
       ),
     );

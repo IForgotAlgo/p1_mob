@@ -1,0 +1,286 @@
+{
+   "checksum": "61846e89e3c78823b1d5d9ba3ac30e44",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13368394518891115",
+               "date_last_used": "13368394535089145",
+               "guid": "c00aec95-6175-4426-a60d-f74930c5c0ad",
+               "id": "9",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Gemini",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://gemini.google.com/app?hl=pt-PT",
+               "visit_count": 2
+            }, {
+               "date_added": "13368394570320894",
+               "date_last_used": "0",
+               "guid": "50897dbe-5b63-4b05-a1e7-8929ea769e45",
+               "id": "10",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Google",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.google.com/",
+               "visit_count": 1
+            }, {
+               "date_added": "13368394586936616",
+               "date_last_used": "0",
+               "guid": "8e451f33-815f-4d9c-b428-824d80ef35b3",
+               "id": "11",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Gmail",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://mail.google.com/mail/u/0/#inbox",
+               "visit_count": 1
+            }, {
+               "date_added": "13368394685970998",
+               "date_last_used": "0",
+               "guid": "3e83ee69-aeb8-4b1e-8050-437b3dc872af",
+               "id": "12",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Google Play",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://play.google.com/store/games?device=windows",
+               "visit_count": 1
+            } ],
+            "date_added": "13368394545539203",
+            "date_last_used": "0",
+            "date_modified": "13368394685970998",
+            "guid": "634bb41f-0e8c-4c5e-947b-0bc92e8df523",
+            "id": "8",
+            "name": "Google",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13368395183961438",
+               "date_last_used": "0",
+               "guid": "706c2e26-8e78-407d-b34b-9f2939c3b4f1",
+               "id": "14",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Mercado Livre Brasil",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.mercadolivre.com.br/?msockid=05e4a91f675f60c007e1bdc766a46147",
+               "visit_count": 1
+            }, {
+               "date_added": "13368395194608780",
+               "date_last_used": "0",
+               "guid": "78f8672f-74f7-4ab5-b2ae-16d17125db5a",
+               "id": "15",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Shopee Brasil",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://shopee.com.br/",
+               "visit_count": 1
+            }, {
+               "date_added": "13368395207509285",
+               "date_last_used": "0",
+               "guid": "42d2dbc2-2ac5-4bc4-b0f7-0485bbcf38a1",
+               "id": "16",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "AliExpress",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://pt.aliexpress.com/?src=bing&albch=search&acnt=1603219&isdl=y&aff_short_key=UneMJZVf&albcp=554517157&albag=1297424817493570&slnk=&trgt=kwd-81089270150588:loc-20&plac=&crea=81089104730003&netw=o&device=c&mtctp=e&utm_source=Bing&utm_medium=ppc&utm_campaign=BR(%E5%B7%B4%E8%A5%BF%EF%BC%89Search-Bing-Trademark-20230705&utm_content=E-aliexpress&utm_term=aliexpress-aliexpress&msclkid=fa162c0125d2198743764ac1d61c006a",
+               "visit_count": 1
+            }, {
+               "date_added": "13368395249578869",
+               "date_last_used": "0",
+               "guid": "f04711f4-3d81-4548-8d70-967273c42387",
+               "id": "17",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Proper Jack",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.properjack.com.br/",
+               "visit_count": 1
+            } ],
+            "date_added": "13368394931881060",
+            "date_last_used": "0",
+            "date_modified": "13368395249578869",
+            "guid": "261a7bb0-f11b-40c8-ab5e-1312e3919f71",
+            "id": "13",
+            "name": "Stores",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13368395398972908",
+               "date_last_used": "0",
+               "guid": "2d6b3119-051e-41e8-8109-74071ac7dee4",
+               "id": "19",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Gov.BR",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.gov.br/pt-br",
+               "visit_count": 1
+            } ],
+            "date_added": "13368395307468800",
+            "date_last_used": "0",
+            "date_modified": "13368395398972908",
+            "guid": "9ed3becc-69c9-4bcd-b068-cda78c26623c",
+            "id": "18",
+            "name": "Gov.BR",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13370040455698591",
+               "date_last_used": "0",
+               "guid": "d6196df4-a610-4aaf-bcb2-6f1973733bcc",
+               "id": "21",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Plataforma Google M… – Console do Google Cloud",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://console.cloud.google.com/google/maps-apis/onboard;flow=gmp-api-key-flow",
+               "visit_count": 1
+            }, {
+               "date_added": "13370040463596117",
+               "date_last_used": "0",
+               "guid": "5717ec8f-8ba1-4110-b21e-578bc50a6e50",
+               "id": "22",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Configurar o módulo do app  |  Android Studio  |  Android Developers",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://developer.android.com/build/configure-app-module?hl=pt-br#kts",
+               "visit_count": 1
+            }, {
+               "date_added": "13370040467433479",
+               "date_last_used": "0",
+               "guid": "01a720b4-3d3e-4f0e-9085-6fe1d211144e",
+               "id": "23",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Andróide | Tremulação",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://docs.flutter.dev/deployment/android#review-the-gradle-build-configuration",
+               "visit_count": 1
+            }, {
+               "date_added": "13370453415115127",
+               "date_last_used": "0",
+               "guid": "9e472ed6-e528-41d7-beb0-a8cbb1f53d79",
+               "id": "24",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Windows 11 default wallpaper - Color Collection (Light and Dark) [3840x2400] : r/wallpaper",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.reddit.com/r/wallpaper/comments/out3n3/windows_11_default_wallpaper_color_collection/",
+               "visit_count": 1
+            } ],
+            "date_added": "13370040446682382",
+            "date_last_used": "0",
+            "date_modified": "13370453415115127",
+            "guid": "5d086601-4bbf-43d7-bcca-eb29ac75038a",
+            "id": "20",
+            "name": "Desenvolvimento Tesão",
+            "source": "unknown",
+            "type": "folder"
+         } ],
+         "date_added": "13377302181043505",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13367852357905990",
+               "date_last_used": "0",
+               "guid": "ea68fd3d-bd8e-48c9-a487-bbe23204e51c",
+               "id": "7",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "laptops and netbooks :: 3 series :: ideapad 3 15alc6 :: 82mf :: 82mfs00000 :: pe09sxd3 Lenovo PC Support - Lenovo Support BR",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://pcsupport.lenovo.com/br/pt/products/laptops-and-netbooks/3-series/ideapad-3-15alc6/82mf/82mfs00000/pe09sxd3/downloads/driver-list/component?name=BIOS&id=5AC6A815-321D-440E-8833-B07A93E0428C",
+               "visit_count": 0
+            } ],
+            "date_added": "13298170513081543",
+            "date_last_used": "0",
+            "date_modified": "13367852357905990",
+            "guid": "f378740c-d3d7-41b2-b9ef-a0bb6b305122",
+            "id": "6",
+            "name": "Jogos e Downloads",
+            "source": "unknown",
+            "type": "folder"
+         } ],
+         "date_added": "13377302181043508",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Outros favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13377302181043509",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos do celular",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCA6E3nOTAQAAEgAqGEF2dzJEWUpLMEQ5U1dYYTJjdkV5U1E9PUgDoAYHEq0BCBcSqAEKHE1kcDRkbGd5RHRoYTNYMnF5ME1tUTE0dm9kOD0SJDAxYTcyMGI0LTNkM2UtNGYwZS05MDg1LTZmZTFkMjExMTQ0ZRgAIAAoADDLz7OenDI41NCznpwyQNTQs56cMkocL0ZkNU0vUDQ0SE9tc0x5WG9DTGhlWUdtdHVJPVofIh3UeEo2eE96MGZXdEd4cHlTQm9JdWk0SnJjNUpBPWWmOYhxwj4CYAUSrQEIFhKoAQocM3I2MzJYQ3pOWndPbDJjWHFjYUsydllHMWdzPRIkNTcxN2VjOGYtOGJhMS00MTEwLWIyMWUtNTc4YmM1MGE2ZTUwGAAgACgAMN6xs56cMjjksrOenDJA5LKznpwyShxIUDdPTVVaNjJSZVZpWGJIYXNuMU5nTWU0czg9Wh8iHagzS3p4djBEUVVCY0lYcTl1V3oxdTNlWGE3cTg9ZcHfLjXCPgJgBRKtAQgYEqgBChw5NS81NmxrUURDYVlMUGZZN3FadXVkd1h5YzA9EiQ5ZTQ3MmVkNi1lNTI4LTQxZDctYmViMC1hOGNiYjFmNTNkNzkYACAAKAAw5u2n450yOKjwp+OdMkCo8KfjnTJKHG5seGovb295T2Q4dVdCNXlCMlJTbzYzbjlNTT1aHyId6lA4eUVaQU42aVNBRUNkTWtvUERJZk1QNzhDMD1lwCv08MI+AmAFEqwBCBUSpwEKHEJKQjBUZS81d2FoU1JBd29VNGV3UE1CRXI1Zz0SJGQ2MTk2ZGY0LWE2MTAtNGFhZi1iY2IyLTZmMTk3MzczM2JjYxgAIAAoADDJjrOenDI4lvaynpwyQJb2sp6cMkocMHdzOEhCQmp3M1h0Y2NWVEd3bysyRVR2ZDcwPVoeIhxQWnBXRnJXOVhRVTV6QTF0aHVMWmVEcDRvSXc9Zfm6IzjCPgJgBRKtAQgUEqgBChx6eHdHRjZVeVVEQjZwZExVUDZ5WTAxajRubzg9EiQ1ZDA4NjYwMS00YmJmLTQzZDctYmNjYS1lYjI5YWM3NTAzOGEYACAAKAAwia6ynpwyOLuvsp6cMkC7r7KenDJKHEZaZWJCbkVGWjNGMzBlVWZ0S0k2TDN5T2FEYz1aHyId9WNyTDJLUnpWcVVrSFdXSkMydkQ1Yy9haklnZz1lAAAAAMI+AmAAEqwBCBMSpwEKHFBUcDBCcDY0Tk11MFZ5V2QyVzhLZW1VYjVodz0SJDJkNmIzMTE5LTA1MWUtNDFlOC04MTA5LTc0MDcxYWM3ZGVlNBgAIAAoADCJlv2NljI4zMP8jZYyQMzD/I2WMkocWU1tc2UzOTg2VTZCNW11L3Y5VVNMaHRCWklJPVoeIhxUait2anoweEdMaCt2MHB3TkgyT3VtZm8yY2c9ZZLWZ0LCPgJgBRKtAQgQEqgBChxTN1k5bEZ5TW0vSTVCRWUrVHNvS0hRSFRZUFk9EiQ0MmQyZGJjMi0yYWM1LTRiYzQtYjBmNy0wNDg1YmJjZjM4YTEYACAAKAAwl5LxjZYyOLHr8I2WMkCx6/CNljJKHDNUU3U5OTZnNEw4SGJJeG1pN1UrQlFZKzB0Yz1aHyIdtEdMK25ZUjRyVDhwUDBjSVNicW4zdnBxT0RBST1lX5lct8I+AmAFEqwBCA8SpwEKHHFrbTVlN3d5Z1AvTTdSdmVQN1plVmIvVWh3WT0SJDc4Zjg2NzJmLTc0ZjctNGFiNS1iMmFlLTE2ZDE3MTI1ZGI1YRgAIAAoADCtrfCNljI48obwjZYyQPKG8I2WMkoceEdYdkhya0dUTVBoRjFsZUFmNStNcFI0a1lNPVoeIhxoNHM0YWRUZ1pVc2xBRHNLZHArTlkyU2c5Rms9ZX1OuALCPgJgBRKtAQgLEqgBChxvcmVLd01xSC8zeXQrcWs2dC9qN2tKODNqRVE9EiQ4ZTQ1MWYzMy04MTVmLTRkOWMtYjQyOC04MjRkODBlZjM1YjMYACAAKAAwjNzLjZYyOOP8yo2WMkDj/MqNljJKHHBoaXFmd2s4ZGVQekMwWWFEL0ZkeDVVM1hQTT1aHyIds1FMSzZGK1IvTTdJUkZ6aDBwL2hjaUVWNzEyaz1lmz2FtsI+AmAFEo4BCAISiQEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJDUyZDhjMTk1LTc1YjUtNTNhYy1iN2Y3LTczNmJkZDc3ZGQ0MhgAIAAoADChnP6csDA4tPygyOgvQLT8oMjoL0ocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAADCPgJgABKtAQgMEqgBChxjNExPQUU0LzhlemNhblFtN1MrOHBYKzhDblE9EiQzZTgzZWU2OS1hZWI4LTRiMWUtODA1MC00MzdiM2RjODcyYWYYACAAKAAwharRjZYyOOOC0Y2WMkDjgtGNljJKHC9BeFRabmFpYk5nM04rZHhFZlhQY1NFUk1aND1aHyId2ThEUkNCWURwd3VEYWJySFFQc3FMR3p1WG5oST1lf8LPuMI+AmAFEq0BCA0SqAEKHC95ZzR3VmtJQmtmOWNrbzFDZHVRTGg4eFNoRT0SJDI2MWE3YmIwLWYxMWItNDBjOC1hYjVlLTEzMTJlMzkxOWY3MRgAIAAoADCngeCNljI4uILgjZYyQLiC4I2WMkocV1hNaWt4SkdzQU9FbzBoTEtRMEI5WDNab3h3PVofIh3VOTZkOXZUaTNUQmtUOS9JVG1vaC8vUGhMVXM0PWUAAAAAwj4CYAASrAEICRKnAQocZEdaUkxTTlFIWTZyNmhQOXc0dEdPSUZqcnJrPRIkYzAwYWVjOTUtNjE3NS00NDI2LWE2MGQtZjc0OTMwYzVjMGFkGAAgACgAMLS3yI2WMjjD6MaNljJAw+jGjZYyShw3RStmbC85WnJXM09qaVVGMFR4RFAxalQxMVk9Wh4iHFcxMmNPK2VBVFdKZE82c3l0MCtkZ3ZyQXdPND1lPwPzFsI+AmAFEq0BCBISqAEKHDlwMGFHMVA0bXdoVXh2UE1WNm1XaXgxVXBmcz0SJDllZDNiZWNjLTY5YzktNGJjZC1iMDY4LWNkYTc4YzI2NjIzYxgAIAAoADDy7faNljI47PD2jZYyQOzw9o2WMkocK0pLVUlMVU9JRWlGMWQxUStZdnZZT1ZpWWFVPVofIh3qZ1FIR3E1by82QW1JNi9ici82Z2xHSUhNczVrPWUAAAAAwj4CYAASrAEIDhKnAQocSHU5dDQ0Wnd0TTZnK1p2SkIvcDJaam1tYk53PRIkNzA2YzJlMjYtOGU3OC00MDdkLWIzNGItOWYyOTM5YzNiNGYxGAAgACgAMITn742WMjjEtO+NljJAxLTvjZYyShxhLzNkcFBhSmNKYzhiM1EzdGZyNEhkcGhMckk9Wh4iHEVxdTBidGsyVjFlQ2RmczNXbXpNWlBSNzYwWT1l3qdFFcI+AmAFEqwBCAoSpwEKHG96WUk4eExOY2RiVERRaFY2WmRqRFJ0K0JUbz0SJDUwODk3ZGJlLTViNjMtNGIwNS1hMWU3LTg5MjllYTc2OWU0NRgAIAAoADCz+MmNljI4rPrJjZYyQKz6yY2WMkocZU5kY1JaWGN6ck1YQTFmUDE0UVlJR0NKRStjPVoeIhxnUkFKMWM4SUJOVUdCWHV3SHFQamlDbGh1TTA9ZRAw/+TCPgJgBRKtAQgIEqgBChxIZlB5bnpsZzcxem8yYVdVbE0wMGsyN3BwMnc9EiQ2MzRiYjQxZi0wZThjLTRjNWUtOTQ3Yi0wYmM5MmU4ZGY1MjMYACAAKAAws7fIjZYyOIq5yI2WMkCKuciNljJKHEJUNzlwdjFOb3JLZzdaeWJjeXR1WXUwcTR0RT1aHyIdqzJJM0FhYXR5Skh5L0NFbzFXWk1ZazZWNVNlMD1lAAAAAMI+AmAAEo4BCAESiQEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0SJGI5OTk3MDNmLTcwZjEtNTgxMS1hYjUzLWVkMzliMTBiYTQwZRgAIAAoADChnP6csDA4lfygyOgvQJX8oMjoL0ocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAADCPgJgABKtAQgREqgBChxTRVk4aFpIZy9jazhJODh2M3Y1RzZ0RSt3VkE9EiRmMDQ3MTFmNC0zZDgxLTQ1NDgtOGQ3MC05NjcyNzNjNDIzODcYACAAKAAw9ZLMwqYyOOu0842WMkDrtPONljJKHENxMXlaV05pT0xabWpOTkN2ajRzUXdyOEFWVT1aHyId2kFiU2Vxb1lySUg0bmdWUUQ5Y2dCT2tLakx3RT1l1nB/Q8I+AmAFEqwBCAcSpwEKHDlMbjZkSjE5RWliRGxsL2tNaW0zVy9kdFJCND0SJGVhNjhmZDNkLWJkOGUtNDhjOS1hNDg3LWJiZTIzMjA0ZTUxYxgAIAAoADCXlNONljI4+Z7TjZYyQPme042WMkocUnhVMGs4SWdrbFZ6MmR6c0l4QmZmOUVaK0RrPVoeIhxXT0pFUjNvODBXOC9kbGxZc3Y3aDdsRldEazQ9ZWf5h2DCPgJgBRKsAQgGEqcBChxhTmtWcVJlS0JrWG1KYTIwZzhVN0t2eUlFejg9EiRmMzc4NzQwYy1kM2Q3LTQxYjItYjllZi1hMGJiNmIzMDUxMjIYACAAKAAwlpTTjZYyONKe042WMkDSntONljJKHDkrVlBRcVV1SFlOOW5adEsxWXpDelJJaFIvbz1aHiIcNUZsYm9XaVhJd2k0R0VRZDdhallXVmU2Q3pFPWUAAAAAwj4CYAASjgEIAxKJAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkOGZiYTFhZWQtZjgyMy01ZDc2LWEyZjgtZjNiYjJhZTc5NmRiGAAgACgAMKGc/pywMDii/aDI6C9Aov2gyOgvShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAAMI+AmAAMAA4AA==",
+   "version": 1
+}
